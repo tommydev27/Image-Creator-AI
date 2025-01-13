@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Tommy APPS">
+<meta property="og:description" content="Create stunning AI-generated images with ease using Tommy APPS.">
+<meta property="og:image" content="https://iili.io/24TAJ6b.md.jpg">
+<meta property="og:url" content="https://tommydev27.github.io/AI-Image-Creator/">
+<meta property="og:type" content="website">
+<meta property="fb:app_id" content="122153594342352754">
+  <title>tommy-APPS</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  
+  </head>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: black;
+      background-color: #d7e5e2;
+    }
+
+
+/* Gaya untuk tombol dark mode */
+.darkmode {
+  -webkit-tap-highlight-color: transparent; 
+}
+
+/* Gaya untuk container dan header */
+.container {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  justify-content: center;
+  padding: 20px;
+  background-color: ;
+  }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Gaya untuk profil */
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+
+.profile-picture {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover; /* Agar gambar tetap proporsional */
+  box-shadow: 1px 1px 1px #bebebe, -1px -1px 1px #ffffff;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.profile-info .subtitle {
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+.header h1 {
+  font-size: 15px;
+  font-family: 'Orbitron', sans-serif;
+  color: #333;
+  margin-top: -20px;
+}
+
+.fas.fa-check-circle {
+  font-size: 15px;
+  color: #007bff;
+  margin-left: 0px;
+  margin-bottom: 0px;
+  border-radius: 50%;
+  padding: 0px;
+}
+
+/* Gaya untuk tanggal dan waktu */
+.date-time {
+  font-size: 9px;
+  font-family: 'Orbitron', sans-serif;
+  color: 0;
+  margin-top: -30px;
+  margin-left: 31%;
+  font-weight: bold;
+}
+
+/* Gaya tombol geser */
+.darkmode {
+  width: 26px;
+  height: 12px;
+  background-color: gray;
+  border-radius: 30px;
+  position: relative;
+  margin-right: -10%;
+  margin-top: -65px;
+  cursor: pointer;
+  border: 1px solid #333;
+}
+
+.darkmode .toggle-circle {
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  transition: left 0.3s ease, background-color 0.3s ease;
+}
+
+.darkmode.active {
+  background-color: #16181b;
+  border: 1px solid red;
+  
+}
+
+.darkmode.active .toggle-circle {
+  background-color: #41ff3c;
+}
+@keyframes blink-colors {
+  0% {
+    background-color: red;
+  }
+  33% {
+    background-color: blue;
+  }
+  66% {
+    background-color: white;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+.darkmode.active .toggle-circle {
+  left: 15px;
+  background-color: #41ff3c; 
+  animation: blink-colors 1.3s infinite;
+}
+
+
+/* Gaya untuk mode gelap */
+body.dark-mode {
+  background-color: #121212;
+  color: #41ff3c;
+}
+
+body.dark-mode .header h1 {
+  color: #fff;
+}
+
+.darkmode-label {
+  font-size: 8px; 
+  color: #888;
+  text-align: center; 
+  margin-top: 12px; 
+}
+
+
+#halaman1 {
+  padding: 13px;
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  border-radius: 8px;
+}
+
+#halaman1 h1 {
+  font-size: 12px;
+  margin-top: -10px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: left; 
+}
+
+#halaman1 p {
+  font-size: 12px;
+  margin-bottom: -5px;
+  text-align: left; 
+
+}
+
+#halaman1 .form-control {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+
+/* halaman2*/
+#halaman2 {
+    font-family: Arial, sans-serif;
+    margin-left: 0px;
+    margin-top: 10px;
+    padding: 13px;
+}
+
+#halaman2 h1 {
+  font-size: 12px;
+  margin-top: -20px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#halaman2 p {
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+
+/* Icon menu Navigasi text*/
+    nav.top-menu {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 0px;
+      padding: 10px 0;
+    }
+
+    .menu-item {
+      color: ;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .menu-item i {
+      font-size: 20px;
+      margin-bottom: 5px;
+      transition: transform 0.2s ease, color 0.2s ease;
+    }
+
+    .menu-item i:active {
+      transform: scale(1.2);
+      color: #ff6347;
+    }
+
+    .menu-item span {
+      font-size: 9px;
+      margin-top: 5px;
+      pointer-events: none;
+    }
+
+    .content {
+      padding: 20px;
+      display: none;
+    }
+
+    .content h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .content p {
+      font-size: 16px;
+    }
+
+
+
+
+#Ai {
+  padding: 13px;
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  border-radius: 10px;
+}
+#Ai h1 {
+  font-size: 12px;
+  margin-top: -10px;
+  font-family: 'Orbitron', sans-serif;
+  text-align: left; 
+}
+
+#Ai p {
+  font-size: 12px;
+  margin-bottom: 5px;
+  text-align: left; 
+
+}
+
+    .promptBox {
+      width: 100%;
+      height: 95px;
+      padding: 5px;
+      margin-bottom: 5px;
+      border: 1px solid #03b90a;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    
+    /* Gaya Loader */
+    .loader {
+      display: none;
+      border: 5px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 5px solid #03b90a;
+      width: 25px;
+      height: 25px;
+      margin: 20px auto;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Gaya Output */
+    #image-container img {
+      width: 100%;
+      margin-top: 10px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+
+  </style>
+
+<body>
+
+<!-- JUDUL -->
+<div class="container">
+  <div class="header">
+    <div class="profile">
+      <img src="https://iili.io/2CHtVnt.md.jpg" alt="Foto Profil" class="profile-picture">
+      <div class="profile-info">
+        <p class="digital-text">
+        </p>
+<h1>Tommy Web-APPS <i class="fas fa-check-circle"></i>
+        
+        </h1>
+<p class="subtitle">Web Developer &amp; Designer</p>
+        
+<p class="subtitle" style="font-size: 12px">
+  <span>︻</span><span style="color: #9d4801;">み</span><span style="color: #df052a;">✪</span><span style="color: #8d1105;">🝛</span><span>━━─────╼💥</span>
+</p>
+
+
+      </div>
+    </div>
+    <div class="darkmode" id="darkModeToggle">
+      <div class="toggle-circle"></div>
+      <p class="darkmode-label">mode</p>
+    </div>
+  </div>
+</div>
+    <div id="timeContainer">
+      <p id="dateTime" class="date-time"></p>
+    </div>
+    
+    <!-- Menu Navigasi -->
+    <nav class="top-menu">
+      <div class="menu-item" data-target="#Ai">
+        <i class="fab fa-studiovinari"></i>
+        <span>Creatr Ai</span>
+      </div>
+
+   
+      <div class="menu-item" data-target="#halaman1">
+        <i class="fab fa-gg"></i>
+        <span>Creatr Ai 2</span>
+      </div>
+      
+            <div class="menu-item" data-target="#halaman2">
+        <i class="fab fa-rev"></i>
+        <span>faceSwap</span>
+      </div>
+      
+      
+      <div class="menu-item" data-target="#halaman5">
+        <i class="fab fa-dev"></i>
+        <span>Pengaturan</span>
+      </div>
+    </nav>
+ <hr>
+
+<div id="content-container" style="
+  display: block; 
+  max-height: 500px; 
+  overflow-y: auto;">
+
+      
+    <!-- Konten -->
+<section id="Ai" class="content">
+  <h1>TM-Ai</h1>
+  <p>Masukkan teks berdasarkan imajinasi atau apa yang ingin Anda buat </p>
+
+  <div class="generator">
+    <div class="input">
+      <!-- Input teks sebagai kotak teks -->
+      <textarea class="promptBox" id="prompt" placeholder="Tulis prompt di sini..."></textarea>
+    </div>
+
+    <button id="generate" style="background-color: #4CAF50; color: white; border: 2px solid #3e8e41; border-radius: 8px; font-size: 12px; width:150px; height: 30px; cursor: pointer; margin-top: -10px; font-weight: bold;">
+      Generate Images
+    </button>
+
+    <div class="loader" id="loading-spinner"></div>
+    <div class="output">
+      <h2 id="generatedText" style="font-size: 15px; margin-top: 5px;">Generated Images:</h2>
+      <div id="image-container" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;"></div>
+      <a id="dlButton" href="#" download style="display: none;">Download</a>
+    </div>
+  </div>
+
+  <div id="preset-images" style="margin-top: 30px;">
+    <h3 style="font-size: 12px;">Gambar Preset klik untuk buat</h3>
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+      <div>
+        <img src="https://iili.io/2S9pr8v.md.jpg" alt="Glowing Goldfish" data-description="Create images of glowing goldfish with morning dew seaweed and crystal roses with white neon light. Beautiful Korean mermaid woman dressed in Real HD realistic batik sitting on very big and beautiful flowers" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">prompt:</p>
+      </div>
+      <div>
+        <img src="https://iili.io/2SJKczb.md.jpg" alt="Beautiful Mermaid" data-description="beautiful owl with long colorful feathers, perched on a cherry tree, with a snow mountain as a background, a cool view with the light of the wind flowing beautiful neon colors" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">prompt:</p>
+      </div>
+            <div>
+                <img src="https://iili.io/2UmAAJf.md.jpg" alt="Morning Dew" data-description="beautiful Korean mermaid, underwater view filled with coral, seaweed, sand, colorful glass, Koi fish (Cyprinus carpio), Discus fish (Symphysodon spp.), Guppy fish (Poecilia reticulata) Betta fish (Betta splendens), lively comet fish (Carassius auratus), and gentle sea turtles" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">prompt:</p>
+      </div>
+      <div>
+        <img src="https://iili.io/2SqLNDv.md.jpg" alt="Morning Dew" data-description="a beautiful Korean woman, with long wings like a butterfly with colorful patterns, with flowing neon sand light, very beautiful, sky garden background" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">prompt:</p>
+      </div>
+      
+      
+           <div>
+              <img src="https://iili.io/2UmYAE7.md.jpg" alt="Crystal Roses" data-description="A queen was at the door of the Boro Budur temple palace, escorted by the guards" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">prompt:</p>
+      </div>
+          <div>
+              <img src="https://iili.io/2UmcJfI.md.jpg" alt="Crystal Roses" data-description="Wanita korea cyborg berbadan robot, dengan teknologi. sedang mengetik komputer dengan tampilan programmer seperti radar dan cahaya mengalirkan neon dan tulisan di komputer" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">prompt:</p>
+      </div>
+          <div>
+              <img src="https://iili.io/2UmjO0J.th.jpg" alt="Crystal Roses" data-description="Seorang wanita cantik korea berhijab berpakaian batik tiga peniti kain sulam, di belakangnya ada kursi panjang dan pohon sakura, dan sekitarnya ada taman bunga warna-warni berbentuk bundaran melingkari." style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">prompt:</p>
+      </div>
+           <div>
+              <img src="https://iili.io/2SJLcg4.md.jpg" alt="Crystal Roses" data-description="A majestic phoenix is reborn from digital ashes in a holographic blaze of shiny iron nickel wings, giving rise to a beautiful Korean woman wearing a singlet tactical pants tactical boots with a crystal clear ultra-real power light" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">prompt:</p>
+      </div>
+    </div>
+        <img src="https://iili.io/2Umrxus.md.jpg" alt="Crystal Roses" data-description="bird" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
+
+      </div>
+     </section>
+</div>
+  
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const generateButton = document.getElementById("generate");
+  const promptInput = document.getElementById("prompt");
+  const imageContainer = document.getElementById("image-container");
+  const loadingSpinner = document.getElementById("loading-spinner");
+  const genText = document.getElementById("generatedText");
+
+  function generateImages(description) {
+    imageContainer.innerHTML = ""; // Kosongkan kontainer gambar
+    loadingSpinner.style.display = "block";
+    genText.style.display = "none";
+    generateButton.disabled = true;
+
+    const generateImageUrl = (seed) =>
+      `https://image.pollinations.ai/prompt/${encodeURIComponent(description)}?nologo=1&seed=${seed}`;
+
+    const imageCount = 4;
+    let imagesLoaded = 0;
+
+    for (let i = 0; i < imageCount; i++) {
+      const randomSeed = Math.floor(Math.random() * 1000000000);
+      const imageUrl = generateImageUrl(randomSeed);
+      const image = document.createElement("img");
+      image.setAttribute("alt", "Generated Image");
+      image.style.width = "100%";
+      image.style.height = "auto";
+      image.style.cursor = "pointer";
+      image.style.border = "1px solid #ddd";
+      image.style.borderRadius = "8px";
+
+      image.onload = function () {
+        imagesLoaded++;
+        if (imagesLoaded === imageCount) {
+          loadingSpinner.style.display = "none";
+          genText.style.display = "block";
+          generateButton.disabled = false;
+        }
+      };
+
+      image.onerror = function () {
+        alert("Gagal memuat salah satu gambar. Silakan coba lagi.");
+        loadingSpinner.style.display = "none";
+        generateButton.disabled = false;
+      };
+
+      image.src = imageUrl;
+
+      image.addEventListener("click", function () {
+        window.open(imageUrl, "_blank");
+      });
+
+      imageContainer.appendChild(image);
+    }
+  }
+
+  generateButton.addEventListener("click", function () {
+    const description = promptInput.value || "beautiful landscape";
+    generateImages(description);
+  });
+
+// Event listener untuk gambar preset
+const presetImages = document.querySelectorAll("#preset-images img");
+presetImages.forEach((image) => {
+  image.addEventListener("click", function () {
+    const description = this.getAttribute("data-description");
+    promptInput.value = description; // Isi kotak teks dengan deskripsi
+    generateImages(description); // Panggil fungsi untuk langsung membuat gambar
+
+    // Scroll ke elemen tertentu (bagian atas generator)
+    const generatorSection = document.querySelector(".generator");
+    generatorSection.scrollIntoView({
+      behavior: "smooth", // Animasi scroll
+      block: "start", // Mulai dari atas elemen
+    });
+  });
+});
+
+});
+
+</script>
+    
+    
+    
+    
+ <section id="halaman1" class="content">
+      <h1>TM-AI</h1>
+        <p>Buat Gambar dengan ukuran panjang atur sesuaikan</p>
+        
+        
+<style>
+    .unique-image-container {
+        margin-top: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e0e0e0;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    img.unique-generated-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    input[type="text"], select, button {
+        margin: 5px 0;
+        width: 100%;
+        padding: 5px;
+        font-size: 13px;
+    }
+    button.unique-generate-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: 2px solid #3e8e41;
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button.unique-save-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: 2px solid #3e8e41;
+        padding: 5px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button.unique-generate-btn:hover {
+        background-color: #45a049;
+    }
+
+    /* Gaya Loader */
+    .loader {
+      display: none;
+      border: 5px solid #f3f3f3;
+      border-radius: 50%;
+      border-top: 5px solid #03b90a;
+      width: 25px;
+      height: 25px;
+      margin: 20px auto;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+        .image-slider-container {
+        overflow-x: auto;
+        white-space: nowrap;
+        border: 1px solid #3e8e41;
+        padding: 5px;
+        border-radius: 8px;
+
+    }
+    .image-slider {
+        display: flex;
+        gap: 10px;
+    }
+    .slider-image {
+        width: 100px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s;
+    }
+    .slider-image:hover {
+        transform: scale(1.1);
+    }
+    
+</style>
+
+
+    <div class="unique-container">
+    <!-- Konten yang sudah ada -->
+
+    <!-- Slider untuk gambar kecil -->
+    <div class="image-slider-container" style="margin-top: 20px;">
+        <div class="image-slider">
+            <img src="https://iili.io/2rBCAcF.md.jpg" alt="Gambar 1" class="slider-image" data-prompt="A hyper-realistic photo of a lush green forest with sunlight filtering through the trees, highly detailed textures, natural lighting, and sharp focus.
+                  Chinese women's high-detail hair (Quality hair details: 1.1) Clear eyes, double eyelids look good, sharp eye makeup, Create the beauty of eyelash makeup, thin eyebrows, highly detailed eyes, sharp nose, beautiful red lips, rosy cheeks , With delicate makeup on her face, beautiful face, Perfectly proportional face shape, （Advanced facial details：1.1）A Chinese girl sits on a throne, the throne is inlaid with precious stones, surrounded by Chinese phoenix beasts, gold and color rubies, unique monster illustration, Dau al set, high resolution, bright realistic, super high resolution, complex, super detailed, (skin dent), cute, feminine, body details, ( Facial details: 1.1), (contoured iris), (perfect eyes), 4k, beautiful, (masterpiece: 1.2), (best quality: 1.2), beautiful closed long dress, dynamic pose, rich colors, light and shadow film, red and gold clothes, realism, my eyes are very bright, original picture. HD.">
+            <img src="https://iili.io/2rBfSKF.md.jpg" alt="Gambar 2" class="slider-image" data-prompt="Create a hyper-realistic image of Spider-Man wearing a futuristic, shiny white robot suit, designed with intricate metallic details and glowing blue accents. He stands confidently in the foreground. Behind him, a large, highly detailed Transformer-like robot sits in a defensive pose, with a reflective metallic coating. The scene is set in a futuristic city at dusk, with warm and cool lighting providing realistic shading of the characters. Make sure textures, proportions and lighting are photorealistic">
+
+            <img src="https://iili.io/2rUEPCg.md.jpg" alt="Gambar 4" class="slider-image" data-prompt="beautiful Korean mermaid, underwater view filled with coral, seaweed, sand, colorful glass, Koi fish (Cyprinus carpio), Discus fish (Symphysodon spp.), Guppy fish (Poecilia reticulata) Betta fish (Betta splendens), lively comet fish (Carassius auratus), and gentle sea turtles">
+                 
+                 
+                 
+
+               <img src="https://iili.io/2rQCD0l.md.jpg" alt="Gambar 5" class="slider-image" data-prompt="A beautiful dance on ice featuring two enchanting fairies, dressed in glossy dresses, realistic and fantastical atmosphere, ethereal lighting, intricate details, whimsical background, soft glows, elegant poses, magical winter scenery">
+                 
+
+              <img src="https://iili.io/2rQ2LF9.md.jpg" alt="Gambar 5" class="slider-image" data-prompt="a beautiful Korean woman, with long wings like a butterfly with colorful patterns, with flowing neon sand light, very beautiful, sky garden background">
+              <img src="https://iili.io/2rQJYwQ.md.jpg" alt="Gambar 5" class="slider-image" data-prompt="fotorealistick, masterpiece, Highest quality, Very detailed, Japaese アンDroid girl,Portraiture,Plump,Thick,Control panel,アンDroid,Droid,Mechanical Hand, robotの腕と脚, Black Hair,Blunt bangs,perfect robot girl,Long tube,A thick cable was attached to her neck.,アンDroid,robot,humanoid,cyborg,japanese cyborg girl ,robot-assembly plant,She is now assembling,Assembly scene,Chubby,Squat">
+                                    
+              <img src="https://iili.io/2rBeIcl.md.jpg" alt="Gambar 3" class="slider-image" data-prompt="Create images of glowing goldfish with morning dew seaweed and crystal roses with white neon light. Beautiful Korean mermaid woman dressed in Real HD realistic batik sitting on very big and beautiful flowers">
+            <img src="https://iili.io/2rUJkJt.md.jpg" alt="Gambar 5" class="slider-image" data-prompt="A realistic depiction of a Chinese noblewoman warrior in detailed traditional royal attire, wielding a sword with intricate engravings. She is unleashing a powerful whirlwind, surrounded by glowing neon-like streams of energy flowing naturally around her. Her expression is fierce yet composed, her hair flowing dynamically in the wind. The scene is highly detailed, with a realistic background of a misty battlefield or ancient courtyard, illuminated by the vibrant glow of her energy, emphasizing her mystical and powerful presence">
+              <img src="https://iili.io/2rLblne.md.jpg" alt="Gambar 5" class="slider-image" data-prompt="photorealistick, korean women, ((( amazoness)))、Tribe、fashionable face paint、Tribal Body Paint、(Japanese Face)、((cute))、Smooth white skin、Exposed clothes、tribal costumes、dense forest background、20 year、women、cute、super detailed,((( realistic, photo realistic, photo-realistic :1.37))), high definition, high definition, Studio Lighting, Very Smooth Painting, sharp concentration, physically based rendering, highly detailed description, professional, bright colors, bokeh, cinematic lighting, Dramatic Shadows, real、">
+                 
+            </div>
+        </div>
+      </div>
+      
+        <div class="unique-image-container">
+            <img id="uniqueGeneratedImage" class="unique-generated-image" alt="">
+        </div>
+            <div id="loader" class="loader"></div>
+        <div class="scroll-container">
+ <textarea id="uniquePromptInput" class="unique-prompt-input" placeholder="Tulis prompt di sini..." style="width: 100%; margin-top: 8px; height: 95px; padding: 5px; border: 1px solid #03b90a; border-radius: 5px; font-size: 14px;"></textarea>
+
+        </div>
+        <!-- Size Controls -->
+            <div>
+                <label for="uniqueHeightInput" style="font-size: 13px;">Select Image Height</label>
+                <select id="uniqueHeightInput" class="unique-height-input">
+                    <option value="400">400 panjang ukuran</option>
+                    <option value="500">500 panjang ukuran</option>
+                    <option value="600">600 panjang ukuran</option>
+                    <option value="700">700 panjang ukuran</option>
+                    <option value="800">800 panjang ukuran</option>
+                </select>
+            </div>
+
+            <button id="uniqueGenerateBtn" class="unique-generate-btn">Generate Image</button>
+            <button id="uniqueSaveBtn" class="unique-save-btn" disabled>Save Image</button>
+        
+         <img src="https://iili.io/2r1CUk7.md.jpg" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #03b90a; border-radius: 8px;">
+           <p style="text-align: left; margin-top: 5px;">prompt:</p>
+        
+    
+
+<script>
+    // Ambil elemen-elemen DOM
+    const promptInput = document.getElementById("uniquePromptInput");
+    const sliderImages = document.querySelectorAll(".slider-image");
+    const generatedImage = document.getElementById("uniqueGeneratedImage");
+    const loader = document.getElementById("loader");
+    const saveBtn = document.getElementById("uniqueSaveBtn");
+    const heightInput = document.getElementById("uniqueHeightInput");
+    const generateBtn = document.getElementById("uniqueGenerateBtn");
+
+    // Fungsi untuk Generate Gambar
+    function generateImage(description = null) {
+        const prompt = description || promptInput.value.trim();
+        const height = parseInt(heightInput.value) || 400; // Default 400px
+        const width = 400; // Fixed width
+
+        if (!prompt) {
+            alert("Please enter a description for the image.");
+            return;
+        }
+
+        // Tampilkan loader
+        loader.style.display = 'block';
+
+        // Generate random seed untuk variasi gambar
+        const seed = Math.floor(Math.random() * 1000000);
+
+        // URL gambar
+        const generateImageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?nologo=1&seed=${seed}&width=${width}&height=${height}`;
+
+        // Update sumber gambar
+        generatedImage.src = generateImageUrl;
+
+        // Sembunyikan loader setelah gambar selesai dimuat
+        generatedImage.onload = () => {
+            loader.style.display = 'none';
+            saveBtn.disabled = false;
+        };
+    }
+
+    // Fungsi untuk menyimpan gambar
+    function saveImage() {
+        const link = document.createElement('a');
+        link.href = generatedImage.src;
+        link.download = 'generated_image.png';
+        link.click();
+    }
+
+    // Event Listener untuk klik pada slider image
+    sliderImages.forEach(image => {
+        image.addEventListener("click", function () {
+            const prompt = this.getAttribute("data-prompt"); // Ambil prompt dari data atribut
+            promptInput.value = prompt; // Isi prompt ke textarea
+            generateImage(prompt); // Panggil fungsi generate
+        });
+    });
+
+    // Event Listener untuk tombol Generate
+    generateBtn.addEventListener("click", () => generateImage());
+
+    // Event Listener untuk tombol Save
+    saveBtn.addEventListener("click", saveImage);
+    </script>
+
+</section>
+
+<section id="halaman2" class="content">
+    <h1>TM faceSwap</h1>
+    <p>Masukan Target Gambar Swap &amp;
+Pilih Wajah.</p>
+      
+    <style>
+
+        #swapAI_resultImage {
+            display: none;
+            border: 1px solid #3e8e41;
+            border-radius: 5px;
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+        }
+
+        #swapAI_saveButton {
+            display: none;
+        }
+
+        .loader {
+            display: none;
+            border: 5px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 5px solid #03b90a;
+            width: 25px;
+            height: 25px;
+            margin: 20px auto;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #3e8e41;
+            width: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 0 auto;
+            margin-top: 0px;
+            gap: 0px;
+        }
+
+        .image-container label {
+            display: block;
+            text-align: center;
+        }
+
+        .image-container img {
+            width: 100px;
+            height: 150px;
+            align-items: center;
+            margin: 0 20px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #4CAF50;
+        }
+
+        .image-container div {
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .file-input-container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            margin: 0px auto;
+        }
+
+        .file-input-container input {
+            width: 35%;
+        }
+    </style>
+
+    <div class="image-container" id="swapAI_imageContainer">
+        <div class="image-item">
+            <label for="swapAI_image1">
+                <img id="swapAI_img1" src="https://iili.io/2raUOUG.md.jpg" alt="Image 1">
+            </label>
+            <div>Target Gambar Swap</div>
+        </div>
+        <div class="image-item">
+            <label for="swapAI_image2">
+                <img id="swapAI_img2" src="https://iili.io/2raUOUG.md.jpg" alt="Image 2">
+            </label>
+            <div>Pilih Wajah</div>
+        </div>
+    </div>
+
+    <input type="file" id="swapAI_image1" accept="image/*" style="display: none;">
+    <input type="file" id="swapAI_image2" accept="image/*" style="display: none;">
+
+    <button id="swapAI_swapButton" style="background-color: #4CAF50; color: white; border: 2px solid #3e8e41; border-radius: 8px; font-size: 12px;  cursor: pointer; font-weight: bold;">Perform Face Swap</button>
+    <button id="swapAI_saveButton">Save Result</button>
+    <div class="loader" id="swapAI_loader"></div>
+    <p id="swapAI_resultMessage"></p>
+    <img id="swapAI_resultImage" src="" alt="Face swap result">
+
+
+        
+           <img src="https://iili.io/2rGJE5g.md.jpg" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #03b90a; border-radius: 8px;">
+        <p style="text-align: center; margin-top: 5px;">Crystal Roses</p>
+      
+    
+    
+    <script>
+        document.getElementById("swapAI_image1").addEventListener("change", function (event) {
+            const img1 = document.getElementById("swapAI_img1");
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    img1.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById("swapAI_image2").addEventListener("change", function (event) {
+            const img2 = document.getElementById("swapAI_img2");
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    img2.src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        document.getElementById("swapAI_swapButton").addEventListener("click", async function () {
+            const image1 = document.getElementById("swapAI_image1").files[0];
+            const image2 = document.getElementById("swapAI_image2").files[0];
+            const loader = document.getElementById("swapAI_loader");
+
+            if (!image1 || !image2) {
+                document.getElementById("swapAI_resultMessage").textContent = "Please upload both images.";
+                return;
+            }
+
+            const imgbbApiKey = "6079f31f290dde23ff1235385d7ac047";
+            const piapiApiKey = "8627ce31b0397c58a628340b99a63324397d0aa7a52b2cbd5d39d2f9721ec3cd";
+
+            async function uploadImageToImgbb(image) {
+                const formData = new FormData();
+                formData.append("image", image);
+                formData.append("key", imgbbApiKey);
+
+                const response = await fetch("https://api.imgbb.com/1/upload", {
+                    method: "POST",
+                    body: formData
+                });
+                const result = await response.json();
+                if (result.success) {
+                    return result.data.url;
+                } else {
+                    throw new Error("Image upload failed: " + result.error.message);
+                }
+            }
+
+            try {
+                loader.style.display = "block";
+                document.getElementById("swapAI_resultMessage").textContent = "Uploading images...";
+                const targetImageUrl = await uploadImageToImgbb(image1);
+                const swapImageUrl = await uploadImageToImgbb(image2);
+
+                const createTaskResponse = await fetch("https://api.piapi.ai/api/v1/task", {
+                    method: "POST",
+                    headers: {
+                        "x-api-key": piapiApiKey,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        model: "Qubico/image-toolkit",
+                        task_type: "face-swap",
+                        input: {
+                            target_image: targetImageUrl,
+                            swap_image: swapImageUrl
+                        }
+                    })
+                });
+
+                const createTaskResult = await createTaskResponse.json();
+                if (!createTaskResult.data || !createTaskResult.data.task_id) {
+                    throw new Error("Failed to create task: " + JSON.stringify(createTaskResult));
+                }
+
+                const taskId = createTaskResult.data.task_id;
+
+                const pollTaskResult = async () => {
+                    const getTaskResponse = await fetch(`https://api.piapi.ai/api/v1/task/${taskId}`, {
+                        method: "GET",
+                        headers: {
+                            "x-api-key": piapiApiKey
+                        }
+                    });
+
+                    const getTaskResult = await getTaskResponse.json();
+                    if (getTaskResult.data && getTaskResult.data.output && getTaskResult.data.output.image_url) {
+                        return getTaskResult.data.output.image_url;
+                    } else if (getTaskResult.data && getTaskResult.data.status === "completed") {
+                        throw new Error("No output image found.");
+                    } else if (getTaskResult.data && getTaskResult.data.status === "failed") {
+                        throw new Error("Task failed: " + JSON.stringify(getTaskResult));
+                    } else {
+                        await new Promise((resolve) => setTimeout(resolve, 5000));
+                        return pollTaskResult();
+                    }
+                };
+
+                document.getElementById("swapAI_resultMessage").textContent = "Processing face swap...";
+                const resultImageUrl = await pollTaskResult();
+
+                loader.style.display = "none";
+                document.getElementById("swapAI_resultImage").src = resultImageUrl;
+                document.getElementById("swapAI_resultImage").style.display = "block";
+                document.getElementById("swapAI_saveButton").style.display = "inline-block";
+                document.getElementById("swapAI_resultMessage").textContent = "Face swap completed!";
+
+                document.getElementById("swapAI_saveButton").addEventListener("click", function () {
+                    const link = document.createElement("a");
+                    link.href = resultImageUrl;
+                    link.download = "face_swap_result.png";
+                    link.click();
+                });
+            } catch (error) {
+                loader.style.display = "none";
+                console.error("Error:", error);
+                document.getElementById("swapAI_resultMessage").textContent = "An error occurred: " + error.message;
+            }
+        });
+    </script>
+  </section>
+
+    <!-- Profile -->
+    <section id="halaman5" class="content" style="padding: 13px">
+    <h1 style="font-size: 12px; margin-top: -10px; font-family: 'Orbitron', sans-serif;">TM-AI</h1>
+  <p style="font-size: 12px; margin-top: 5px; margin-bottom: 5px;">Buat Gambar dengan ukuran panjang atur sesuaikan</p>
+  
+  <div style="border: 1px solid #007BFF; border-radius: 5px;  background-color: white;">
+  
+    <iframe src="https://docs.google.com/document/d/1j3MqQ0TdudvNgpydQfMbzj782bQxzv0aRnC0HU-yYJs/edit?usp=drivesdk" style=" height: 500px; border: none; width: 325px;"></iframe>
+  </div>
+    </section>
+
+
+  <script>
+    // Script untuk navigasi
+    const menuItems = document.querySelectorAll('.menu-item');
+    const contents = document.querySelectorAll('.content');
+
+    menuItems.forEach(item => {
+      item.addEventListener('click', () => {
+        const target = document.querySelector(item.dataset.target);
+        contents.forEach(content => content.style.display = 'none');
+        target.style.display = 'block';
+      });
+    });
+
+    // Menampilkan Halaman 1 secara default
+    contents.forEach(content => content.style.display = 'none');
+    document.querySelector('#Ai').style.display = 'block';
+
+    // Profil menu toggle
+    const pengaturanItem = document.querySelector('[data-target="#halaman5"]');
+    const menuProfil = document.getElementById('menu-profil');
+
+    pengaturanItem.addEventListener('click', () => {
+      if (menuProfil.style.left === '0px') {
+        menuProfil.style.left = '-300px';  // Menutup menu
+      } else {
+        menuProfil.style.left = '0px';  // Menampilkan menu
+      }
+    });
+    
+    
+// Darkmode
+    const toggle = document.getElementById("darkModeToggle");
+
+toggle.addEventListener("click", function () {
+
+  this.classList.toggle("active");
+  
+
+  document.body.classList.toggle("dark-mode");
+});
+
+  // TIME
+function updateDateTime() {
+  const dateTimeElement = document.getElementById("dateTime");
+  
+  // Opsi format hari, tanggal, dan waktu
+  const options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false
+  };
+
+  // Ambil waktu saat ini
+  const now = new Date();
+  const formattedDate = now.toLocaleDateString("id-ID", options);
+
+  // Tampilkan waktu
+  dateTimeElement.textContent = formattedDate;
+}
+
+// Perbarui waktu setiap detik
+setInterval(updateDateTime, 1000);
+
+// Inisialisasi pertama kali
+updateDateTime();
+
+    
+  </script>
+
+
+
+</body>
+</html>
