@@ -14,7 +14,6 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-  
   </head>
   <style>
     /* Reset */
@@ -29,83 +28,58 @@
       color: black;
       background-color: #d7e5e2;
     }
-
-
-/* Gaya untuk tombol dark mode */
-.darkmode {
-  -webkit-tap-highlight-color: transparent; 
-}
-
+    
+    
 /* Gaya untuk container dan header */
 .container {
+  display: flex;
+  padding: 10px;
   width: 100%;
-  max-width: 100%;
-  overflow: hidden;
-  justify-content: center;
-  padding: 20px;
-  background-color: ;
-  }
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  max-width: 1200px;
+  box-sizing: border-box;
+  gap: 10px;
+  
 }
-
-/* Gaya untuk profil */
-.profile {
-  display: flex;
-  align-items: center;
-}
-
 
 .profile-picture {
-  width: 80px;
-  height: 80px;
+  width: 85px;
+  height: 85px;
   border-radius: 50%;
-  margin-right: 10px;
-  object-fit: cover; /* Agar gambar tetap proporsional */
+  padding: 5px;
   box-shadow: 1px 1px 1px #bebebe, -1px -1px 1px #ffffff;
 }
 
-.profile-info {
-  display: flex;
-  flex-direction: column;
-}
-
-
 .profile-info .subtitle {
-  font-size: 10px;
+  font-size: 11px;
   margin-top: 2px;
 }
 
 .header h1 {
-  font-size: 15px;
-  font-family: 'Orbitron', sans-serif;
+  font-size: 16.5px;
   color: #333;
-  margin-top: -20px;
+  margin-left: 0px;
 }
 
 .fas.fa-check-circle {
   font-size: 15px;
   color: #007bff;
   margin-left: 0px;
-  margin-bottom: 0px;
   border-radius: 50%;
-  padding: 0px;
 }
 
 /* Gaya untuk tanggal dan waktu */
 .date-time {
   font-size: 9px;
-  font-family: 'Orbitron', sans-serif;
   color: 0;
-  margin-top: -30px;
-  margin-left: 31%;
+  margin-top: 0px;
+  margin-left: 0px;
   font-weight: bold;
+  padding: 3px;
+  color: white;
+  background-color: #007bff;
+  border-radius: 50px;
+  border: 1px solid #ccc;
 }
+
 
 /* Gaya tombol geser */
 .darkmode {
@@ -114,8 +88,7 @@
   background-color: gray;
   border-radius: 30px;
   position: relative;
-  margin-right: -10%;
-  margin-top: -65px;
+
   cursor: pointer;
   border: 1px solid #333;
 }
@@ -131,6 +104,13 @@
   transition: left 0.3s ease, background-color 0.3s ease;
 }
 
+.darkmode {
+  position: absolute;
+  right: 10px; /* menyesuaikan jarak dari kanan */
+  top: 10px; /* menyesuaikan jarak dari atas */
+}
+
+
 .darkmode.active {
   background-color: #16181b;
   border: 1px solid red;
@@ -139,6 +119,7 @@
 
 .darkmode.active .toggle-circle {
   background-color: #41ff3c;
+  
 }
 @keyframes blink-colors {
   0% {
@@ -182,14 +163,13 @@ body.dark-mode .header h1 {
 
 #halaman1 {
   padding: 13px;
-  max-width: 800px;
   margin: auto;
   font-family: Arial, sans-serif;
   border-radius: 8px;
 }
 
 #halaman1 h1 {
-  font-size: 12px;
+  font-size: 15px;
   margin-top: -10px;
   font-family: 'Orbitron', sans-serif;
   text-align: left; 
@@ -197,13 +177,12 @@ body.dark-mode .header h1 {
 
 #halaman1 p {
   font-size: 12px;
-  margin-bottom: -5px;
+  margin-bottom: 0px;
   text-align: left; 
 
 }
 
 #halaman1 .form-control {
-  width: 100%;
   padding: 5px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -221,15 +200,14 @@ body.dark-mode .header h1 {
 }
 
 #halaman2 h1 {
-  font-size: 12px;
+  font-size: 15px;
   margin-top: -20px;
-  font-family: 'Orbitron', sans-serif;
 }
 
 #halaman2 p {
   font-size: 12px;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  margin-top: 2px;
+  margin-bottom: 3px;
 }
 
 
@@ -237,12 +215,11 @@ body.dark-mode .header h1 {
     nav.top-menu {
       display: flex;
       justify-content: space-around;
-      margin-top: 0px;
+      margin-top: -15px;
       padding: 10px 0;
     }
 
     .menu-item {
-      color: ;
       text-align: center;
       cursor: pointer;
       text-decoration: none;
@@ -261,6 +238,11 @@ body.dark-mode .header h1 {
       transform: scale(1.2);
       color: #ff6347;
     }
+
+/* Menghilangkan efek kedip pada ponsel saat klik tombol */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
 
     .menu-item span {
       font-size: 9px;
@@ -287,15 +269,13 @@ body.dark-mode .header h1 {
 
 #Ai {
   padding: 13px;
-  max-width: 800px;
   margin: auto;
   font-family: Arial, sans-serif;
   border-radius: 10px;
 }
 #Ai h1 {
-  font-size: 12px;
+  font-size: 15px;
   margin-top: -10px;
-  font-family: 'Orbitron', sans-serif;
   text-align: left; 
 }
 
@@ -340,53 +320,50 @@ body.dark-mode .header h1 {
       border-radius: 10px;
       cursor: pointer;
     }
-
-
+    
   </style>
-
+</head>
 <body>
-
 <!-- JUDUL -->
 <div class="container">
-  <div class="header">
     <div class="profile">
       <img src="https://iili.io/2CHtVnt.md.jpg" alt="Foto Profil" class="profile-picture">
-      <div class="profile-info">
-        <p class="digital-text">
-        </p>
-<h1>Tommy Web-APPS <i class="fas fa-check-circle"></i>
-        
-        </h1>
-<p class="subtitle">Web Developer &amp; Designer</p>
-        
-<p class="subtitle" style="font-size: 12px">
-  <span>︻</span><span style="color: #9d4801;">み</span><span style="color: #df052a;">✪</span><span style="color: #8d1105;">🝛</span><span>━━─────╼💥</span>
-</p>
-
-
-      </div>
+      </img>
     </div>
+      
+    <div class="header">
+      <div class="profile-info">
+
+        <h1>Tommy Web-APPS <i class="fas fa-check-circle"></i>
+      </h1>
+      
+      <p class="subtitle" style=" margin-left: 0px;">Web Developer &amp; Designer</p>
+        
+      <p class="subtitle" style="font-size: 12px;  margin-left: 0px;">
+      <span>︻</span><span style="color: #9d4801;">み</span><span style="color: #df052a;">✪</span><span style="color: #8d1105;">🝛</span><span>━━─────╼💥</span>
+      </p>
+      <div id="timeContainer">
+        <p id="dateTime" class="date-time"></p>
+      </div>
+  </div>
+      </div>
     <div class="darkmode" id="darkModeToggle">
       <div class="toggle-circle"></div>
       <p class="darkmode-label">mode</p>
     </div>
   </div>
-</div>
-    <div id="timeContainer">
-      <p id="dateTime" class="date-time"></p>
-    </div>
-    
-    <!-- Menu Navigasi -->
-    <nav class="top-menu">
-      <div class="menu-item" data-target="#Ai">
-        <i class="fab fa-studiovinari"></i>
-        <span>Creatr Ai</span>
       </div>
 
-   
+    <!-- Menu Navigasi -->
+    <nav class="top-menu">
       <div class="menu-item" data-target="#halaman1">
+        <i class="fab fa-studiovinari"></i>
+        <span>IMG AI</span>
+      </div>
+      
+            <div class="menu-item" data-target="#Ai">
         <i class="fab fa-gg"></i>
-        <span>Creatr Ai 2</span>
+        <span>create img</span>
       </div>
       
             <div class="menu-item" data-target="#halaman2">
@@ -394,24 +371,23 @@ body.dark-mode .header h1 {
         <span>faceSwap</span>
       </div>
       
-      
       <div class="menu-item" data-target="#halaman5">
         <i class="fab fa-readme"></i>
         <span>halaman</span>
       </div>
     </nav>
- <hr>
+   <hr>
+         </div>
+          </div>
+  <div id="content-container" style="
+        display: block; 
+        max-height: 500px; 
+        overflow-y: auto;">
 
-<div id="content-container" style="
-  display: block; 
-  max-height: 500px; 
-  overflow-y: auto;">
-
-      
     <!-- Konten -->
 <section id="Ai" class="content">
-  <h1>TM-Ai</h1>
-  <p>Masukkan teks berdasarkan imajinasi atau apa yang ingin Anda buat </p>
+  <h1>Hasilkan Gambar</h1>
+  <p>hasilkan empat gambar dengan klik Generate. <br> Untuk gambar hampir serupa pilih klik gambar yang tersedia pada halaman atau modifikasi prompt sesuai versi anda  </p>
 
   <div class="generator">
     <div class="input">
@@ -470,13 +446,8 @@ body.dark-mode .header h1 {
       </div>
     </div>
         <img src="https://iili.io/2Umrxus.md.jpg" alt="Crystal Roses" data-description="bird" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
-
       </div>
-     </section>
-</div>
-  
-
-
+  </div>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
   const generateButton = document.getElementById("generate");
@@ -551,26 +522,21 @@ presetImages.forEach((image) => {
     generatorSection.scrollIntoView({
       behavior: "smooth", // Animasi scroll
       block: "start", // Mulai dari atas elemen
+          });
+        });
       });
     });
-  });
-});
-
   </script>
     </section>
+          </div>
+          </div>
     
-    <div id="content-container" style="
-  display: block; 
-  max-height: 500px; 
-  overflow-y: auto;">
-    
+
  <section id="halaman1" class="content">
-      <h1>TM-AI</h1>
-        <p>Buat Gambar dengan ukuran panjang atur sesuaikan, <br> Klik gambar untuk menghasilkan prompt: atau pilih kata kunci di menu halaman.</p>
-        
-        
-<style>
-    .unique-image-container {
+    <h1>TM-AI</h1>
+       <p>Buat Gambar prompt anda atau buat gambar dengan klik gambar yang tersedia Sesuaikan Ukuran.</p>
+     <style>
+       .unique-image-container {
         margin-top: 8px;
         display: flex;
         justify-content: center;
@@ -650,18 +616,18 @@ presetImages.forEach((image) => {
         cursor: pointer;
         transition: transform 0.3s;
     }
-    .slider-image:hover {
-        transform: scale(1.1);
-    }
+
+.slider-image:hover {
+    transform: scale(1.03); /* Memperbesar elemen saat hover */
+    transition: transform 0.1s ease; /* Menambahkan efek transisi */
+}
+
     
 </style>
-
-
     <div class="unique-container">
-    <!-- Konten yang sudah ada -->
 
     <!-- Slider untuk gambar kecil -->
-    <div class="image-slider-container" style="margin-top: 20px;">
+    <div class="image-slider-container" style="margin-top: 10px;">
         <div class="image-slider">
             <img src="https://iili.io/2rBCAcF.md.jpg" alt="Gambar 1" class="slider-image" data-prompt="A hyper-realistic photo of a lush green forest with sunlight filtering through the trees, highly detailed textures, natural lighting, and sharp focus.
                   Chinese women's high-detail hair (Quality hair details: 1.1) Clear eyes, double eyelids look good, sharp eye makeup, Create the beauty of eyelash makeup, thin eyebrows, highly detailed eyes, sharp nose, beautiful red lips, rosy cheeks , With delicate makeup on her face, beautiful face, Perfectly proportional face shape, （Advanced facial details：1.1）A Chinese girl sits on a throne, the throne is inlaid with precious stones, surrounded by Chinese phoenix beasts, gold and color rubies, unique monster illustration, Dau al set, high resolution, bright realistic, super high resolution, complex, super detailed, (skin dent), cute, feminine, body details, ( Facial details: 1.1), (contoured iris), (perfect eyes), 4k, beautiful, (masterpiece: 1.2), (best quality: 1.2), beautiful closed long dress, dynamic pose, rich colors, light and shadow film, red and gold clothes, realism, my eyes are very bright, original picture. HD.">
@@ -703,18 +669,22 @@ presetImages.forEach((image) => {
         </div>
         <!-- Size Controls -->
             <div>
-                <label for="uniqueHeightInput" style="font-size: 13px;">Select Image Height</label>
+                <label for="uniqueHeightInput" style="font-size: 13px; font-weight: bold;">height: ukuran panjang gambar</label>
                 <select id="uniqueHeightInput" class="unique-height-input">
-                    <option value="400">400 panjang ukuran</option>
-                    <option value="500">500 panjang ukuran</option>
-                    <option value="600">600 panjang ukuran</option>
-                    <option value="700">700 panjang ukuran</option>
-                    <option value="800">800 panjang ukuran</option>
+                    <option value="400">400s</option>
+                    <option value="500">500Px</option>
+                    <option value="600">600Px</option>
+                    <option value="700">700Px</option>
+                    <option value="800">800M</option>
                 </select>
             </div>
 
             <button id="uniqueGenerateBtn" class="unique-generate-btn">Generate Image</button>
             <button id="uniqueSaveBtn" class="unique-save-btn" disabled>Save Image</button>
+        
+           <p style="text-align: left; margin-top: 5px; margin-bottom: 5px;">Buat prompt sertakan kata kunci lebih detail dan jelas untuk menghasilkan gambar coba juga dengan berbagai bahasa</p>
+           </img>
+
         
          <img src="https://iili.io/24TAJ6b.md.jpg" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #03b90a; border-radius: 8px;">
            <p style="text-align: left; margin-top: 5px;">prompt: select image</p>
@@ -818,16 +788,20 @@ sliderImages.forEach(image => {
     // Event Listener untuk tombol Save
     saveBtn.addEventListener("click", saveImage);
     </script>
-
 </section>
+      </div>
+          </div>
 
+<div id="content-container" style="
+  display: block; 
+  max-height: 500px; 
+  overflow-y: auto;">
 <section id="halaman2" class="content">
-    <h1>TM faceSwap</h1>
+    <h1>faceSwap</h1>
     <p>Masukan Target Gambar Swap &amp;
-Pilih Wajah.</p>
+Pilih Wajah.<br> penggunaan (TERBATAS Masih dalam pengembangan)</p>
       
     <style>
-
         #swapAI_resultImage {
             display: none;
             border: 1px solid #3e8e41;
@@ -935,13 +909,9 @@ Pilih Wajah.</p>
     <p id="swapAI_resultMessage"></p>
     <img id="swapAI_resultImage" src="" alt="Face swap result">
 
-
-        
            <img src="https://iili.io/2rGJE5g.md.jpg" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #03b90a; border-radius: 8px;">
         <p style="text-align: center; margin-top: 5px;">Crystal Roses</p>
-      
-    
-    
+
     <script>
         document.getElementById("swapAI_image1").addEventListener("change", function (event) {
             const img1 = document.getElementById("swapAI_img1");
@@ -1069,20 +1039,115 @@ Pilih Wajah.</p>
             }
         });
     </script>
-  </section>
-
+      </div>
+          </div>
+            </section>
+          
+      <section>
     <!-- Profile -->
-    <section id="halaman5" class="content" style="padding: 13px">
-    <h1 style="font-size: 12px; margin-top: -10px; font-family: 'Orbitron', sans-serif;">TM-AI</h1>
-  <p style="font-size: 12px; margin-top: 5px; margin-bottom: 5px;">Buat Gambar dengan ukuran panjang atur sesuaikan</p>
-  
-  <div style="border: 1px solid #007BFF; border-radius: 5px;  background-color: white;">
-  
-    <iframe src="https://docs.google.com/document/d/1j3MqQ0TdudvNgpydQfMbzj782bQxzv0aRnC0HU-yYJs/edit?usp=drivesdk" style=" height: 500px; border: none; width: 325px;"></iframe>
-  </div>
+  <div id="content-container" style="
+  display: block; 
+  max-height: 500px; 
+  overflow-y: auto;">
+    <section id="halaman5" class="content" style="padding: 13px; margin-top: -5px;">
+
+    <style>
+        .gallery {
+            list-style-type: none;
+            padding: 0;
+        }
+        .gallery-item {
+            margin-bottom: 10px;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+
+        }
+        .gallery-item h3 {
+            margin: 4px 0;
+            font-size: 15px;
+        }
+        .gallery-item p {
+            font-size: 15px;
+            color: #555;
+        }
+        .prompt-list {
+            font-size: 0.9em;
+
+            margin-left: 10px;
+            margin-top: 20px;
+        }
+        .prompt-list ul {
+            margin-top: 10px;
+        }
+    </style>
+
+    <h1 style=" font-size: 19px; margin-top: -5px;">Daftar Kata dan Keterangan</h1>
+    <ul class="gallery">
+        <li class="gallery-item">
+            <h3>Kata kunci/Judul/efek/Gaya Futuristik 🔓</h3>
+            <img src="https://iili.io/24TAJ6b.md.jpg" alt="Gaya Futuristik">
+            <p>Keterangan: cantumkan kata kunci pada awal/kata depan - lanjut penulisan kata tambahan modifikasi secara jelas detail, atau coba dalam bahasa lainnya.</p>
+        </li>
+    </ul>
+
+    <div class="prompt-list">
+        <h4>Kata Kunci Tambahan Prompt:</h4>
+        <ul>
+            <li><strong>Foto-Realistik:</strong> Gambar dengan efek asli, seperti foto nyata.</li>
+            <li><strong>Full-body:</strong> Gambar tubuh penuh, menampilkan objek dari ujung kepala hingga kaki.</li>
+            <li><strong>Close-up:</strong> Gambar dekat, fokus pada wajah atau detail objek tertentu.</li>
+            <li><strong>Portrait:</strong> Gambar potret wajah atau tubuh bagian atas.</li>
+            <li><strong>Wide-angle:</strong> Gambar dengan sudut pandang lebar, menunjukkan pemandangan yang lebih luas.</li>
+            <li><strong>3D Render:</strong> Gambar dengan efek tiga dimensi, biasanya menggunakan teknik komputer untuk menciptakan objek 3D.</li>
+            <li><strong>Watercolor:</strong> Gambar dengan efek cat air yang memberikan nuansa lembut dan transparan.</li>
+            <li><strong>Oil painting:</strong> Gambar dengan efek lukisan minyak, memberikan kesan kaya dan tekstur.</li>
+            <li><strong>Sketch:</strong> Gambar sketsa dengan garis-garis kasar, sering digunakan untuk konsep atau ide awal.</li>
+            <li><strong>Abstract:</strong> Gambar abstrak dengan bentuk dan warna yang tidak terdefinisi, lebih mengutamakan emosi atau interpretasi.</li>
+            <li><strong>Low-poly:</strong> Gaya polygonal dengan sudut tajam dan bentuk sederhana.</li>
+            <li><strong>Cyberpunk:</strong> Gaya futuristik dengan neon, pencahayaan gelap, dan teknologi tinggi, seringkali terinspirasi oleh distopia.</li>
+            <li><strong>Fantasy:</strong> Gaya fantasi dengan elemen magis atau mitologi, seperti makhluk mitologi atau dunia imajinatif.</li>
+            <li><strong>Surreal:</strong> Gambar dengan elemen yang tidak realistis atau berlebihan, sering kali menciptakan ilusi atau mimpi.</li>
+            <li><strong>Vintage:</strong> Gaya klasik atau kuno, seperti gambar lama yang memiliki suasana nostalgia.</li>
+            <li><strong>HDR:</strong> High Dynamic Range, meningkatkan kontras dan detail gambar, membuat gambar lebih hidup.</li>
+            <li><strong>Monochrome:</strong> Gambar dalam satu warna atau tone, menciptakan kesan minimalis dan elegan.</li>
+            <li><strong>Black and White:</strong> Gambar hitam putih, sering digunakan untuk menciptakan efek dramatis atau klasik.</li>
+            <li><strong>Vivid colors:</strong> Warna-warna cerah dan mencolok, memberi kesan hidup dan energik.</li>
+            <li><strong>Muted colors:</strong> Warna-warna lembut dan pudar, memberikan kesan lebih tenang dan damai.</li>
+            <li><strong>Neon lights:</strong> Pencahayaan neon dengan warna terang seperti biru atau merah, memberi kesan futuristik dan modern.</li>
+            <li><strong>Gritty texture:</strong> Tekstur kasar yang memberikan detail yang jelas dan kesan kuat pada gambar.</li>
+            <li><strong>Soft-focus:</strong> Fokus lembut, dengan sebagian gambar tampak buram, menciptakan suasana yang lebih halus.</li>
+            <li><strong>Dreamy atmosphere:</strong> Atmosfer yang lembut dan seperti mimpi, menciptakan nuansa fantastik dan imajinatif.</li>
+            <li><strong>Gothic:</strong> Gaya gelap dengan elemen arsitektur dan suasana mistis, sering digunakan dalam cerita horor atau fantasi gelap.</li>
+            <li><strong>Retro-futuristic:</strong> Gaya yang menggabungkan elemen masa depan dan masa lalu, sering terlihat dalam desain atau film.</li>
+            <li><strong>Pop Art:</strong> Gaya seni dengan warna-warna terang dan elemen budaya populer, sering terinspirasi oleh komik atau iklan.</li>
+            <li><strong>Steampunk:</strong> Gaya yang menggabungkan teknologi retro-futuristik dan mesin uap dengan elemen Victoria.</li>
+            <li><strong>Sci-Fi:</strong> Gaya ilmiah dengan teknologi tinggi, dunia luar angkasa, atau elemen luar biasa lainnya.</li>
+            <li><strong>Concept Art:</strong> Gambar yang menggambarkan ide atau konsep, sering digunakan dalam perancangan film atau permainan.</li>
+            <li><strong>Fantasy landscape:</strong> Pemandangan alam fantasi, seperti dunia lain yang penuh dengan keajaiban.</li>
+            <li><strong>Action scene:</strong> Adegan aksi dengan gerakan dinamis dan penuh energi.</li>
+            <li><strong>Cityscape:</strong> Pemandangan kota, baik modern atau klasik, menggambarkan struktur dan kehidupan urban.</li>
+            <li><strong>Nature scene:</strong> Pemandangan alam, seperti hutan, pantai, atau pegunungan.</li>
+            <li><strong>Time-lapse:</strong> Gambar yang menggambarkan perubahan waktu, misalnya langit malam atau gerakan awan.</li>
+            <li><strong>Cinematic:</strong> Gaya sinematik dengan efek dramatis, seolah-olah berasal dari adegan film.</li>
+            <li><strong>High contrast:</strong> Kontras tajam antara terang dan gelap, memberikan efek dramatis.</li>
+            <li><strong>Soft lighting:</strong> Pencahayaan lembut dengan bayangan yang tidak terlalu keras.</li>
+            <li><strong>Dramatic lighting:</strong> Pencahayaan yang fokus pada elemen tertentu, menciptakan suasana intens.</li>
+            <li><strong>Color grading:</strong> Penyesuaian warna untuk menciptakan suasana tertentu atau efek visual.</li>
+            <li><strong>Monochromatic scheme:</strong> Penggunaan satu warna dalam berbagai intensitas.</li>
+            <li><strong>Hyperrealistic:</strong> Gambar sangat mendetail dan realistis, seperti foto berkualitas tinggi.</li>
+            <li><strong>Isometric view:</strong> Sudut pandang isometrik yang digunakan untuk gambar 3D atau peta.</li>
+            <li><strong>Minimalist:</strong> Gaya dengan elemen yang sangat sederhana dan sedikit detail, memberi kesan bersih dan elegan.</li>
+            <li><strong>Surrealism:</strong> Gaya visual dengan konsep yang tidak masuk akal atau ilusi optik, menciptakan gambar yang aneh dan misterius.</li>
+        </ul>
+    </div>
+<footer style="text-align: center; font-size: 12px; color: #333; margin-top: 20px; margin-bottom: 5px;">
+  Tommy Design versi 0.1.0
+    </footer>
     </section>
-
-
+    </div>
   <script>
     // Script untuk navigasi
     const menuItems = document.querySelectorAll('.menu-item');
