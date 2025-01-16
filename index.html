@@ -417,12 +417,12 @@ body.dark-mode .menu-item i {
         <span>IMG AI</span>
       </div>
       
-            <div class="menu-item" data-target="#Ai">
+      <div class="menu-item" data-target="#Ai">
         <i class="fab fa-gg"></i>
         <span>create img</span>
       </div>
       
-            <div class="menu-item" data-target="#halaman2">
+      <div class="menu-item" data-target="#halaman2">
         <i class="fab fa-rev"></i>
         <span>faceSwap</span>
       </div>
@@ -432,39 +432,38 @@ body.dark-mode .menu-item i {
         <span>Catatan</span>
       </div>
     </nav>
-<hr style="width: 95%; margin: 0 auto; margin-top: -5px;">
+    
+    <hr style="width: 95%; margin: 0 auto; margin-top: -5px;">
 
-         </div>
+      </div>
           </div>
-  <div id="content-container" style="
-        display: block; 
-        max-height: 500px; 
-        overflow-y: auto;">
+              <div id="content-container" style=" display: block; max-height: 500px; overflow-y: auto;">
 
     <!-- Konten -->
-<section id="Ai" class="content">
-  <h1>Hasilkan Gambar</h1>
-  <p>Hasilkan gambar unik dengan prompt sederhana. hasil empat gambar.</p>
+      <section id="Ai" class="content">
+          <h1>Hasilkan Gambar</h1>
+            <p>Hasilkan gambar unik dengan prompt sederhana. hasil empat gambar.</p>
 
-  <div class="generator">
-    <div class="input">
-      <!-- Input teks sebagai kotak teks -->
+            <div class="generator">
+      <div class="input">
+   <!-- Input teks sebagai kotak teks -->
       <textarea class="promptBox" id="prompt" placeholder="Tulis deskripsi kreatif Anda di sini..."></textarea>
-    </div>
+      </div>
 
-    <button id="generate" style="background-color: #4CAF50; color: white; border: 2px solid #3e8e41; border-radius: 8px; font-size: 12px; width:150px; height: 30px; cursor: pointer; margin-top: -10px; font-weight: bold;">
+      <button id="generate" style="background-color: #4CAF50; color: white; border: 2px solid #3e8e41; border-radius: 8px; font-size: 12px; width:150px; height: 30px; cursor: pointer; margin-top: -10px; font-weight: bold;">
       Generate Images
     </button>
 
     <div class="loader" id="loading-spinner"></div>
-    <div class="output">
-      <h2 id="generatedText" style="font-size: 15px; margin-top: 5px;">Generated Images:</h2>
+      <div class="output">
+        <h2 id="generatedText" style="font-size: 15px; margin-top: 5px;">Generated Images:</h2>
+        
       <div id="image-container" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;"></div>
-      <a id="dlButton" href="#" download style="display: none;">Download</a>
+       <a id="dlButton" href="#" download style="display: none;">Download</a>
+      </div>
     </div>
-  </div>
 
-  <div id="preset-images" style="margin-top: 30px;">
+    <div id="preset-images" style="margin-top: 30px;">
     <h3 style="font-size: 12px;">Gambar Preset klik untuk buat</h3>
     <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
       <div>
@@ -474,7 +473,7 @@ body.dark-mode .menu-item i {
       <div>
         <img src="https://iili.io/2SJKczb.md.jpg" alt="Beautiful Mermaid" data-description="beautiful owl with long colorful feathers, perched on a cherry tree, with a snow mountain as a background, a cool view with the light of the wind flowing beautiful neon colors" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
         <p style="text-align: center; margin-top: 5px;">prompt:</p>
-      </div>
+        </div>
             <div>
                 <img src="https://iili.io/2UmAAJf.md.jpg" alt="Morning Dew" data-description="beautiful Korean mermaid, underwater view filled with coral, seaweed, sand, colorful glass, Koi fish (Cyprinus carpio), Discus fish (Symphysodon spp.), Guppy fish (Poecilia reticulata) Betta fish (Betta splendens), lively comet fish (Carassius auratus), and gentle sea turtles" style="width: 100%; height: auto; cursor: pointer; border: 1px solid #ddd; border-radius: 8px;">
         <p style="text-align: center; margin-top: 5px;">prompt:</p>
@@ -509,13 +508,11 @@ body.dark-mode .menu-item i {
     <h2 style="font-size: 15px; color: #2c3e50; margin-bottom: 10px; text-align: left; ">Ciptakan hingga Empat Gambar Sekaligus!</h2>
     <p style="line-height: 1.6; margin: 0;">
         Nikmati kebebasan untuk membuat hingga empat gambar sekaligus tanpa perlu login atau membuat akun. Setiap gambar dapat dikreasikan secara instan, dengan hasil yang sepenuhnya milik Anda. Privasi Anda adalah prioritas kami, dan setiap karya yang Anda buat aman dari gangguan pihak ketiga.
-    </p>
-</div>
-
-
-  </div>
-<script>
-document.addEventListener("DOMContentLoaded", function () {
+        </p>
+      </div>
+    </div>
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
   const generateButton = document.getElementById("generate");
   const promptInput = document.getElementById("prompt");
   const imageContainer = document.getElementById("image-container");
@@ -596,8 +593,7 @@ presetImages.forEach((image) => {
     </section>
 
  
-    
-
+</div>
  <section id="halaman1" class="content">
     <h1>Create image</h1>
        <p>Hasilkan gambar unik dengan prompt sederhana. Pilih ukuran dan gaya yang Anda inginkan.</p>
@@ -622,7 +618,6 @@ presetImages.forEach((image) => {
         padding: 5px;
         font-size: 13px;
     }
-
 
     button.unique-save-btn {
         background-color: #4CAF50;
@@ -677,15 +672,13 @@ presetImages.forEach((image) => {
         transition: transform 0.3s;
     }
 
-.slider-image:hover {
-    transform: scale(1.03); /* Memperbesar elemen saat hover */
-    transition: transform 0.1s ease; /* Menambahkan efek transisi */
-}
-
-    
-</style>
+    .slider-image:hover {
+        transform: scale(1.03); 
+    transition: transform 0.1s ease; 
+      }
+      
+  </style>
     <div class="unique-container">
-
     <!-- Slider untuk gambar kecil -->
     <div class="image-slider-container" style="margin-top: 10px;">
         <div class="image-slider">
@@ -739,8 +732,8 @@ presetImages.forEach((image) => {
                 </select>
             </div>
 
-            <button id="uniqueGenerateBtn" class="unique-generate-btn">Generate Image</button>
-            <button id="uniqueSaveBtn" class="unique-save-btn" disabled>Save Image</button>
+<button id="uniqueGenerateBtn" class="unique-generate-btn" style="background-color:#4CAF50; color: white; border: 2px solid #3e8e41; font-weight: bold; border-radius: 5px;">Generate Image</button>
+<button id="uniqueSaveBtn" class="unique-save-btn" disabled>Save Image</button>
         
            <p style="text-align: left; margin-top: 5px; margin-bottom: 5px;">Buat prompt sertakan kata kunci lebih detail dan jelas untuk menghasilkan gambar coba juga dengan berbagai bahasa</p>
            </img>
@@ -1326,7 +1319,7 @@ Pilih Wajah.<br> penggunaan (TERBATAS Masih dalam pengembangan)</p>
     <p style="font-size: 10px; color: gray; padding: 3px; margin-left: 12px; margin-bottom: 3px; margin-top: 5px;">Design: Tommy (web-app version 0.1.0)</p>
     </p>
   </div>
-</div>
+
 
   <script>
     // Script untuk navigasi
