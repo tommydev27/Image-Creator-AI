@@ -6,7 +6,7 @@
 <meta property="og:title" content="Tommy Website">
 <meta property="og:description" content="Create stunning AI-generated images with ease using Tommy APP.">
 <meta property="og:image" content="https://iili.io/24TAJ6b.md.jpg">
-<meta property="og:url" content="https://tommydev27.github.io/Tommy-Website/">
+<meta property="og:url" content="https://tommydev27.github.io/Image-Creator-AI/">
 <meta property="og:type" content="website">
 <meta property="fb:app_id" content="1245016886587008">
 
@@ -48,7 +48,7 @@
 
 /* Dark mode styles */
 body.dark-mode .profile-picture {
-  background-color: #4d4545;
+  background-color: #121212;
   border-color: #41ff3c;
   box-shadow: 1px 1px 1px #111, -1px -1px 1px #444;
 }
@@ -86,7 +86,7 @@ body.dark-mode .profile-info .subtitle {
   margin-top: -4px;
   font-weight: bold;
   color: #616367;
-  margin-left: -20px;
+  margin-left: 0px;
   padding: 2px;
   transform: skew(-10deg);
   }
@@ -128,7 +128,6 @@ body.dark-mode .profile-info .subtitle {
 .darkmode.active {
   background-color: #16181b;
   border: 1px solid red;
-  
 }
 
 .darkmode.active .toggle-circle {
@@ -263,15 +262,22 @@ body.dark-mode h1 {
 
 /* Dark mode styles */
 body.dark-mode .menu-item i {
-  color: #ffffff;
-  background-color: #4d4545;
-  border-color: #41ff3c;
-  box-shadow: 1px 1px 1px #111, -1px -1px 1px #444;
+  color: #fd0909;
+  background-color: black;
+  border-color: #007bff;
+
 }
+body.dark-mode .menu-item  i:active {
+      transform: scale(1.2);
+      background-color:  #007bff;
+      color: white;
+      border: 1px solid #ffffff;
+    }
+
 
     .menu-item i:active {
       transform: scale(1.2);
-      color: #ff6347;
+      background-color:  #3306fe;
     }
 
 /* Menghilangkan efek kedip pada ponsel saat klik tombol */
@@ -359,6 +365,45 @@ body.dark-mode .menu-item i {
       cursor: pointer;
     }
     
+    #iconunique-container {
+    border: 2px solid #d7e5e2;
+    position: absolute;
+    top: 69px;
+    margin-left: 64px;
+    background-color: #007bff;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 50px;
+    }
+    
+    
+body.dark-mode #iconunique-container {
+    border: 2px solid #121212;
+    background-color: blue; 
+    color: white; 
+    animation: spin 2s linear infinite, blink 1.5s linear infinite;
+    transform-origin: center;
+    transform: scale(1.2); 
+    }
+
+    @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+    }
+
+    @keyframes blink {
+    0% { background-color: blue; color: white; }
+    33% { background-color: red; color: white; }
+    66% { background-color: white; color: blue; }
+    100% { background-color: blue; color: white; }
+    }
+
   </style>
 </head>
 <body>
@@ -367,6 +412,10 @@ body.dark-mode .menu-item i {
     <div class="profile">
       <img src="https://iili.io/2CHtVnt.md.jpg" alt="Foto Profil" class="profile-picture">
       </img>
+    </div>
+    
+<div id="iconunique-container" onclick="window.location.href='user.html';">
+        <i class="fas fa-biohazard"></i>
     </div>
       
     <div class="header">
@@ -1265,6 +1314,55 @@ Pilih Wajah.<br> penggunaan (TERBATAS Masih dalam pengembangan)</p>
             <li><strong>Surrealism:</strong> Gaya visual dengan konsep yang tidak masuk akal atau ilusi optik, menciptakan gambar yang aneh dan misterius.</li>
         </ul>
       </div>
+      
+    <style>
+        .keywords {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f1f1f1;
+            border-left: 4px solid #007bff;
+            border-radius: 5px;
+        }
+        .keywords ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .keywords ul li {
+            margin: 8px 0;
+            color: #333;
+        }
+        .note {
+            font-size: 14px;
+            color: #888;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+    <div class="container">
+
+        <div class="keywords">
+            <strong>Keterangan:</strong>
+            <ul>
+                <li><strong>Kata Kunci Utama:</strong> 
+                    <br>• "bust shot", "head to chest", "upper body portrait"
+                </li>
+                <li><strong>Deskripsi Subjek:</strong> 
+                    <br>• "A smiling woman with long hair and a floral dress"
+                </li>
+                <li><strong>Tambahan Gaya:</strong> 
+                    <br>• "studio lighting", "cinematic detail", "4K resolution"
+                </li>
+                <li><strong>Rasio Aspek:</strong> 
+                    <br>• "3:4" atau "4:5" untuk framing vertikal
+                </li>
+                <li><strong>Contoh Prompt:</strong> 
+                    <br>• "A bust shot of a futuristic robot with glowing blue eyes, head to chest, cyberpunk theme, 4K detail"
+                </li>
+            </ul>
+        </div>
+    </div>
+
       <footer>
   <div class="footer-container">
     <!-- Links Cepat -->
